@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/papuacoffee/static/css/main.573faeff.css",
+    "main.js": "/papuacoffee/static/js/main.c22f87d6.js",
+    "static/media/aboutus-pic1.png": "/papuacoffee/static/media/aboutus-pic1.391db7611d886ef189cd.png",
+    "static/media/aboutus-pic2.png": "/papuacoffee/static/media/aboutus-pic2.5decde265436c7e0e42a.png",
+    "static/media/cartBg.png": "/papuacoffee/static/media/cartBg.06acd75d2c63617daab1.png",
+    "static/media/aboutus-pic3.png": "/papuacoffee/static/media/aboutus-pic3.db825ead72afa5a54660.png",
+    "static/media/about us.png": "/papuacoffee/static/media/about us.138805de16459ad0cb50.png",
+    "static/media/firstpic.png": "/papuacoffee/static/media/firstpic.85ba08d5e107b93dcb19.png",
+    "static/media/aboutus2.png": "/papuacoffee/static/media/aboutus2.d6083983032a904c5eea.png",
+    "static/media/404bg.jpg": "/papuacoffee/static/media/404bg.526f64be74d179ccba44.jpg",
+    "static/media/animation.svg": "/papuacoffee/static/media/animation.958dc8e92d30511ec28a1b91d6c5aeee.svg",
+    "static/media/aromi-caffe-mokarico.jpg": "/papuacoffee/static/media/aromi-caffe-mokarico.272a27b0de484ed5e7f6.jpg",
+    "static/media/loginbg.svg": "/papuacoffee/static/media/loginbg.9ca0df8f3af77acadb9b.svg",
+    "static/media/signupbg.svg": "/papuacoffee/static/media/signupbg.7c80954ee837ee5917b3.svg",
+    "static/media/pattern.png": "/papuacoffee/static/media/pattern.379674481b02865c5b98.png",
+    "static/media/movingb.png": "/papuacoffee/static/media/movingb.d52f66847e1166553d8c.png",
+    "static/media/sigup.jpg": "/papuacoffee/static/media/sigup.787a4c351fac916772cb.jpg",
+    "static/media/revicons.eot": "/papuacoffee/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/papuacoffee/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/papuacoffee/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/logo.svg": "/papuacoffee/static/media/logo.4d9649ebd9427e758865e4c8f7f395a3.svg",
+    "static/media/wlogo.svg": "/papuacoffee/static/media/wlogo.c9bfe3a1c104ffcf34ff52f9845c56f2.svg",
+    "index.html": "/papuacoffee/index.html",
+    "static/media/footerbg.svg": "/papuacoffee/static/media/footerbg.5f656c55ba5a14e48dc6.svg",
+    "main.573faeff.css.map": "/papuacoffee/static/css/main.573faeff.css.map",
+    "main.c22f87d6.js.map": "/papuacoffee/static/js/main.c22f87d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.573faeff.css",
+    "static/js/main.c22f87d6.js"
+  ]
+}
