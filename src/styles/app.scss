@@ -1,0 +1,510 @@
+@import "_mixins.scss";
+@import "colors.scss";
+body {
+  background-color: $milk;
+  color: $Black;
+  margin: 0;
+  .Mui-selected {
+    color: $green !important;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+.signInFormVector {
+  background-image: url("../assets/loginbg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+
+  @include tablets() {
+    background-image: none;
+  }
+}
+
+.signUpFormVector {
+  background-image: url("../assets/signupbg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+
+  @include tablets() {
+    background-image: none;
+  }
+}
+
+.nav-item {
+  display: block;
+  padding: 5px 16px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  text-align: center;
+  height: 70px;
+  line-height: 60px;
+  transition: all 500ms;
+  &:hover {
+    background-color: $green;
+    border-bottom: 3px solid $green !important;
+    color: white !important;
+    box-shadow: none !important;
+  }
+}
+.siginBtn {
+  &:hover {
+    border: none !important;
+  }
+}
+.signout{
+  &:hover{
+    background-color: antiquewhite !important;
+    color: rgb(49, 49, 49) !important;
+  }
+}
+.logo {
+  &:hover {
+    background-color: transparent;
+    color: white !important;
+    border: none !important;
+  }
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-50 {
+  width: 70%;
+  @include tablets() {
+    width: 100%;
+  }
+}
+.mainbtn {
+  background-color: $milk !important;
+  color: $Black !important;
+  transition: all 500ms;
+  &:hover {
+    background-color: $yellow !important;
+  }
+}
+
+.secondbtn {
+  color: $milk !important;
+  border: 1px solid $milk !important;
+  transition: all 500ms;
+  &:hover {
+    color: $yellow !important;
+    border: 1px solid $yellow !important;
+  }
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $yellow;
+}
+
+.footerbg {
+  background-image: url("../assets/footerbg.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: bottom left;
+
+  @include tablets() {
+    background-image: none;
+  }
+}
+
+.social {
+  margin-top: 10px;
+  width: 80px;
+
+  svg {
+    width: 45px;
+    transition: all 500ms;
+
+    &:hover {
+      fill: $yellow;
+    }
+  }
+}
+
+// mobile menu design
+.burger-check {
+  display: none;
+}
+
+/*--------------------------------------
+ Sets the actionable area for the burger
+ including a label for usability
+--------------------------------------*/
+.burger {
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/*--------------------------------------
+ Creates the look of the burger icon
+ using the inner span and pseudo-elements
+--------------------------------------*/
+.burger span,
+.burger span:before,
+.burger span:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  width: 40px;
+  height: 4px;
+  background: $green;
+  border-radius: 0.2em;
+}
+
+/* Reset the left and create the pseudo-element */
+.burger span:before,
+.burger span:after {
+  content: "";
+  left: 0;
+}
+
+/* Top bar position */
+.burger span:before {
+  top: -8px;
+}
+
+/* Bottom bar position */
+.burger span:after {
+  top: 8px;
+}
+
+/* Get rid of more on action (IE9 or higher) */
+.burger-check:checked + .burger:after {
+  content: "";
+}
+/* Get rid of the middle bar on action (IE9 or higher) */
+
+.burger-check:checked + .burger span {
+  height: 0;
+  width: 0;
+}
+
+/* Moves the top and bottom bars to the middle on action (IE9 or higher) */
+.burger-check:checked + .burger span:before,
+.burger-check:checked + .burger span:after {
+  top: 6px;
+}
+
+/* Rotates the top bar on action with full browser support (IE9 or higher) */
+.burger-check:checked + .burger span:before {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+/* Rotates the bottom bar on action with full browser support (IE9 or higher) */
+.burger-check:checked + .burger span:after {
+  -webkit-transform: rotate(-225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(-225deg);
+}
+
+/*==============================================================================
+ Simple reveal (IE9 or higher)
+==============================================================================*/
+span.boo {
+  width: auto;
+  margin-top: 0;
+  line-height: 60px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Reveals Boo! (IE9 or higher) */
+#main-nav-test:checked ~ .boo {
+  height: 50px;
+}
+
+/*==============================================================================
+ Simple mobile menu opening and closing (IE9 or higher)
+==============================================================================*/
+//mobile menu
+.mobile-menu {
+  z-index: 1000;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  flex-direction: row-reverse;
+  background-color: white;
+  box-shadow: 0 2px 10px $gray;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  .sidenav,
+  .closebtn {
+    position: relative;
+    top: -50px;
+    right: 0;
+    width: 50px;
+    color: white;
+
+    z-index: 5;
+    line-height: 1em !important;
+    font-size: 40px !important;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $Black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    .closebtn {
+      text-align: right !important;
+    }
+    a,
+    .dropdown-btn {
+      padding: 6px 30px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      text-align: center !important;
+
+      line-height: 2em;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: right;
+      cursor: pointer;
+      outline: none;
+      border-bottom: 1px solid $Black;
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+    a:active {
+      color: #0aa;
+    }
+
+    /* Add an active class to the active dropdown button */
+    .active {
+      color: white;
+      background-color: $gray;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a2a2a;
+      padding-left: 8px;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+  }
+}
+.d-block-lg {
+  display: block !important;
+  @include tablets() {
+    display: none !important;
+  }
+}
+.d-block-sm {
+  display: none !important;
+  @include tablets() {
+    display: block !important;
+  }
+}
+.d-flex-sm {
+  display: none !important;
+  @include tablets() {
+    display: flex !important;
+  }
+}
+
+.react-multi-carousel-list {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.react-multi-carousel-dot button {
+  border: none;
+}
+.react-multi-carousel-dot--active button {
+  background-color: $green;
+}
+.productsCard {
+  &:hover {
+    box-shadow: 0 2px 20px rgb(182, 182, 182);
+  }
+}
+.cardMedia {
+  cursor: pointer;
+  width: 100% !important;
+}
+.react-multi-carousel-track li:nth-child(odd) .productsCard {
+  background-color: $milk !important;
+  padding: 20px;
+  min-height: 610px !important;
+  .addtocartbtn {
+    position: relative;
+    z-index: 300;
+    background-color: $yellow !important;
+    &:hover {
+      background-color: $green !important;
+    }
+  }
+}
+.productItems {
+  background-color: $milk !important;
+  padding: 20px;
+  min-height: 610px !important;
+  &:hover {
+    box-shadow: 0 2px 20px rgb(182, 182, 182);
+  }
+  .addtocartbtn {
+    position: relative;
+    z-index: 300;
+    background-color: $yellow !important;
+    &:hover {
+      background-color: $green !important;
+    }
+  }
+}
+.react-multi-carousel-track li:nth-child(even) .productsCard {
+  background-color: $green !important;
+  padding: 20px;
+  min-height: 610px !important;
+  .addtocartbtn {
+    position: relative;
+    z-index: 300;
+    background-color: $milk !important;
+    &:hover {
+      background-color: $yellow !important;
+    }
+  }
+}
+.w-70 {
+  width: 70%;
+  @include desktops() {
+    width: auto !important;
+  }
+}
+
+.headerCartIcon {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  .cartAmount {
+    display: flex;
+    background-color: $yellow;
+    width: auto;
+    min-width: 23px;
+    height: 23px;
+    border: 3px solid white;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    border-radius: 30px;
+    position: absolute;
+    top: 19%;
+    left: 65%;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+  }
+  .cartIcon {
+    transition: all 500ms;
+    &:hover {
+      color: #2a2a2a;
+    }
+  }
+}
+.css-1aquho2-MuiTabs-indicator {
+  background-color: $green !important;
+}
+.removerFromCart {
+  &:hover {
+    background-color: none !important;
+  }
+}
+.mobilemt5 {
+  @include tablets() {
+    margin-top: 50px;
+  }
+}
+
+.css-1pyy021-MuiTabs-flexContainer {
+  @include tablets() {
+    flex-direction: column;
+  }
+}
+.css-3qp1da-MuiTabs-indicator {
+  @include tablets() {
+    display: none;
+  }
+}
+
+.emptyCart {
+  background-image: url("../assets/cartBg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 110%;
+}
+
+.productInfoBtn {
+  transition: all 200ms;
+  &:hover {
+    background-color: #cf9d2f !important;
+  }
+}
+.loopImg {
+  background-image: url("../assets/movingb.png");
+  background-size: 30%;
+  background-repeat: repeat;
+  width: 100%;
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -512px -512px;
+  }
+}
+
+.progress-bar {
+  background-color: transparent !important;
+  height: 20px;
+}
+.inner-rect-bar {
+  background-color: $green !important;
+}
+.profileBg{
+  background-image: url("../assets/pattern.png");
+  background-size: 100%;
+  background-repeat: repeat;
+  width: 100%;
+  animation: slide 30s linear infinite;
+}
